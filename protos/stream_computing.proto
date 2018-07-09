@@ -1,0 +1,10 @@
+syntax = "proto3";
+package streamcomputing;
+service StreamComputing {
+    rpc PutObject(stream Object) returns (NullMessage) {}
+}
+message Object {
+    int32  obj  = 1;
+}
+message NullMessage {
+}
